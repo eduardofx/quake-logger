@@ -99,15 +99,16 @@ Explanation of Key Directories
 5.1 Prerequisites
 
 Ensure you have:
- • Go installed on your machine.
- • The Quake log file ready.
+
+- Go installed on your machine.
 
 5.2 Build and Run
 
  1. Clone the repository:
 
-git clone <repository-url>
-cd quake-logger
+> git clone <https://github.com/eduardofx/quake-logger.git>
+
+> cd quake-logger
 
  2. Build the application:
 
@@ -127,12 +128,45 @@ Run the container:
 
 > go test ./shared/test
 
-## 6. Reports
+## 6. Example Output
 
-The application generates:
+Request
 
-- A report for each match with total kills, player list, and kill statistics.
-- A ranking of players across all matches.
-- A summary of deaths grouped by means of death for each match.
+> curl --location '<http://localhost:8080/reports>'
 
-## 7. Example Output
+Return
+
+```
+[
+  {
+    "game_id": "game_1",
+    "total_kills": 0,
+    "players": [
+      
+    ],
+    "kills": {
+      
+    },
+    "kills_by_means": {
+      
+    }
+  },
+  {
+    "game_id": "game_2",
+    "total_kills": 11,
+    "players": [
+      "Mocinha",
+      "Isgalamido"
+    ],
+    "kills": {
+      "Isgalamido": 11
+    },
+    "kills_by_means": {
+      "MOD_FALLING": 1,
+      "MOD_ROCKET_SPLASH": 3,
+      "MOD_TRIGGER_HURT": 7
+    }
+  }
+]
+
+```
