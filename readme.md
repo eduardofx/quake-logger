@@ -70,7 +70,7 @@ Example Death Cause Data:
 }
 ```
 
-### 4. Folder Structure
+## 4. Folder Structure
 
 QUAKE-LOGGER
 
@@ -94,15 +94,15 @@ Explanation of Key Directories
 - interfaces/: Handles user interaction, such as through a command-line interface (CLI).
 - shared/: Contains reusable resources like configuration constants, logs file and test files.
 
-### 6. How to Run the Application
+## 5. How to Run the Application
 
-6.1 Prerequisites
+5.1 Prerequisites
 
 Ensure you have:
  • Go installed on your machine.
  • The Quake log file ready.
 
-6.2 Build and Run
+5.2 Build and Run
 
  1. Clone the repository:
 
@@ -117,17 +117,17 @@ cd quake-logger
 
 > go run main.go
 
-6.3 Using Docker
+5.3 Using Docker
 
 Run the container:
 
 > docker-compose up -d
 
-6.4 Run test
+5.4 Run test
 
 > go test ./shared/test
 
-### 7. Reports
+## 6. Reports
 
 The application generates:
 
@@ -135,4 +135,4 @@ The application generates:
 - A ranking of players across all matches.
 - A summary of deaths grouped by means of death for each match.
 
-### 8. Example Output
+## 7. Example Output
