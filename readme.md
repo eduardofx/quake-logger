@@ -72,7 +72,7 @@ Example Death Cause Data:
 
 ## 4. Folder Structure
 
-QUAKE-LOGGER
+This project leverages Domain-Driven Design (DDD) principles to ensure a modular, maintainable, and scalable codebase.
 
 ```
 ├── application/         # Application services (log parsing and reporting)
@@ -106,9 +106,10 @@ Ensure you have:
 
  1. Clone the repository:
 
-> git clone <https://github.com/eduardofx/quake-logger.git>
-
-> cd quake-logger
+  ```
+  git clone <https://github.com/eduardofx/quake-logger.git>
+  cd quake-logger
+  ```
 
  2. Build the application:
 
