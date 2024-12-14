@@ -78,15 +78,14 @@ func (lp *LogParserService) GenerateReports() []*domain.Match {
 		keys = append(keys, key)
 	}
 
-	// Ordenar as chaves
+	// Order keys
 	sort.Slice(keys, func(i, j int) bool {
-		// Extrai o número do game_id para ordenação correta
 		id1, _ := strconv.Atoi(strings.TrimPrefix(keys[i], "game_"))
 		id2, _ := strconv.Atoi(strings.TrimPrefix(keys[j], "game_"))
 		return id1 < id2
 	})
 
-	// Gerar os relatórios na ordem correta
+	// Generate repost in a order
 	reports := []*domain.Match{}
 	for _, key := range keys {
 		match := lp.Matches[key]
